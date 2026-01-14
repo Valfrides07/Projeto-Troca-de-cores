@@ -1,0 +1,314 @@
+#Background_Selector {
+    font-family: 'DM Sans', 'sans serif';
+    background: #2d27a8;
+    background: linear-gradient(90deg, rgb(26, 23, 80) 0%, rgb(10, 10, 150) 35%, rgb(12, 95, 190) 100%);
+    font-size: 20px;
+    color: rgb(238, 239, 240);
+    display: flex;
+
+    /* organiza os itens de um contêiner flexível verticalmente, empilhando-os 
+    de cima para baixo */
+
+    flex-direction: column;
+    /* Altura mínima da viewport */
+    min-height: 100vh;
+    user-select: none;
+    height: 100%;
+    margin: 0;
+
+}
+
+header {
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+
+#Class_header {
+    background-color: #000000ff;
+    display: flex;
+}
+
+/* ACERTAR ALTURA */
+#Logotipo {
+    height: 120px;
+    min-height: 100px;
+    width: 130px;
+    min-width: 120px;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* ACERTAR ALTURA */
+#Logotipo:hover {
+    transform: scale(1.35);
+}
+
+/* ACERTAR ALTURA */
+#h1_header {
+    font-size: 40px;
+
+    /*Coloca o h1 no meio   */
+    position: absolute;
+    top: 4%;
+    left: 50%;
+
+    /* Movimeta para uma posição especifica */
+    transform: translate(-50%, -50%);
+}
+
+.Class_Main {
+    /* Faz o conteúdo principal(main) ocupar o espaço e joga o footer pra baixo */
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* centraliza os itens flexíveis ao longo do eixo principal */
+    justify-content: center;
+}
+
+#Form {
+    background-color: #000000ff;
+    height: 400px;
+    width: 650px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    margin: auto;
+    border-radius: 0.6cap;
+
+}
+
+/* Subtitulo */
+
+.class_subtitulo {
+
+    height: 400px;
+    width: 100%;
+}
+
+#id_h2 {
+    text-align: center;
+    margin-top: 5%;
+
+}
+
+/* div dos botoes com os nomes das cores*/
+.botoes {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+
+    /* é uma declaração em CSS que define a margem superior de um elemento */
+    margin-top: 10vh;
+    transform: translateY(-50%);
+}
+
+.botao {
+    font-family: "Lato", sans-serif;
+    padding: 5%;
+}
+
+/* Alinhamento dos botões um ao lado do outro */
+style.css.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilo base para todos os botões */
+#button_Preto, #button_Branco, #button_Padrao, #button_Aleatorio {
+    cursor: pointer;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100px;
+    height: 60px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #000000ff;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efeitos de brilhos (glow) em todos os IDs */
+#button_Preto:before{
+    content: '';
+    background: linear-gradient(90deg, #878787,35%, #000, #878787),100%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    border-radius: 15px;
+}
+
+#button_Branco:before{
+    content: '';
+    background: linear-gradient(90deg, #fffdfd,35%, #fffdfd, #fffdfd),100%;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    border-radius: 15px;
+}
+
+#button_Padrao:before{
+    content: '';
+    background: linear-gradient(90deg, rgb(26, 23, 80) 0%, rgb(10, 10, 150) 35%, rgb(12, 95, 190) 100%);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    border-radius: 15px;
+}
+
+#button_Aleatorio:before {
+    content: '';
+    background: linear-gradient(90deg, #ff0000, #ff7300,#00ffd5, #002bff, #7a00ff, #ff00c8, #0276fc);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    border-radius: 15px;
+}
+
+
+/* Estado Hover - Ativa o brilho */
+#button_Preto:hover:before,
+#button_Branco:hover:before,
+#button_Padrao:hover:before,
+#button_Aleatorio:hover:before {
+    opacity: 5;
+}
+
+/* Fundo interno do botão para cobrir o centro do gradiente */
+#button_Preto::after,
+#button_Branco::after,
+#button_Padrao::after,
+#button_Aleatorio::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000ff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* Estado Ativo (Clique) */
+#button_Preto:active,
+#button_Branco:active,
+#button_Padrao:active,
+#button_Aleatorio:active {
+    color: #000000ff;
+}
+
+#button_Preto:active:after,
+#button_Branco:active:after,
+#button_Padrao:active:after,
+#button_Aleatorio:active:after {
+    background: transparent;
+}
+
+/* Animação do gradiente */
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Footer */
+
+#id_footer {
+    display: flex;
+
+    /* controla distribuição */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #000000ff;
+    color: #fff;
+
+    /* Com gap: o espaçamento é consistente, não vaza, não precisa exceção */
+    gap: 20px;
+
+    /* Ele quebra a linha do item caso a tela fique pequena demais */
+    flex-wrap: wrap;
+}
+
+
+
+.div_email,
+.div_autenticidade {
+    font-size: 17px;
+    font-family: Helvetica;
+}
+
+
+#p_email {
+    font-size: 17px;
+    font-family: Helvetica;
+    user-select: text;
+}
+
+
+#p_autenticidade {
+    font-size: 17px;
+    font-family: Helvetica;
+}
+
+@media (max-width: 600px) {
+    #Class_footer {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .div_autenticidade,
+    .div_email {
+        justify-self: center;
+        text-align: center;
+    }
+}
