@@ -41,7 +41,7 @@ Este projeto não requer nenhuma instalação ou dependência.
 
 1.  **Clone este repositório:**
     ```bash
-    git clone https://github.com/seu-usuario/chroma-landing-page.git
+    https://github.com/Valfrides07/Projeto-Troca-de-cores
     ```
 2.  **Navegue até o diretório do projeto:**
     ```bash
